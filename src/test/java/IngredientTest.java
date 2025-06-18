@@ -1,27 +1,20 @@
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
 import praktikum.Ingredient;
 import praktikum.IngredientType;
 
 import static org.junit.Assert.assertEquals;
 
-
-@RunWith(MockitoJUnitRunner.class)
 public class IngredientTest {
 
     private String expectedName = "BigKing";
     private float expectedPrice = 411.65f;
     private Ingredient ingredient;
-
-    @Mock
-    private IngredientType mockIngredientType;
+    private IngredientType ingredientType;
 
     @Before
     public void setUp() {
-        ingredient = new Ingredient(mockIngredientType, "BigKing", 411.65f);
+        ingredient = new Ingredient(ingredientType, "BigKing", 411.65f);
     }
 
     @Test
@@ -36,7 +29,7 @@ public class IngredientTest {
 
     @Test
     public void getIngredientTypeTest() {
-        assertEquals(mockIngredientType, ingredient.getType());
+        assertEquals(ingredientType, ingredient.getType());
     }
 
 }

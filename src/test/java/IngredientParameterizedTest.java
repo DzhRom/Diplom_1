@@ -18,7 +18,7 @@ public class IngredientParameterizedTest {
         this.price = price;
     }
 
-    @Parameterized.Parameters
+    @Parameterized.Parameters(name = "{index} : type = {0}")
     public static Object[][] data() {
         return new Object[][] {
                 {IngredientType.FILLING, "Cheese", 40.0f},
